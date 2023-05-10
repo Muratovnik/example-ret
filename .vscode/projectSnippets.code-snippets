@@ -1,0 +1,68 @@
+{
+  "Шаблон компонента": {
+    "prefix": "component-template",
+    "body": [
+      "<template>",
+      "\t<div class=\"\">$1</div>",
+      "</template>",
+      "",
+      "<script setup lang=\"ts\"></script>",
+      "",
+      "<style scoped lang=\"scss\"></style>"
+    ],
+    "description": ""
+  },
+  "Шаблон компонента группы витрины компонентов": {
+    "prefix": "the-component-showcase-group",
+    "body": [
+      "<TheComponentShowcaseGroup>",
+      "\t<template #name></template>",
+      "",
+      "\t<template #connection></template>",
+      "",
+      "\t<template #description></template>",
+      "",
+      "\t<template #props></template>",
+      "",
+      "\t<template #components></template>",
+      "</TheComponentShowcaseGroup>"
+    ],
+    "description": ""
+  },
+  "Шаблон для пропов компонента группы витрины компонентов": {
+    "prefix": "the-component-showcase-group-prop",
+    "body": [
+      "<TheComponentShowcaseGroupProp>",
+      "\t<template #name></template>",
+      "",
+      "\t<template #description></template>",
+      "",
+      "\t<template #required></template>",
+      "",
+      "\t<template #default></template>",
+      "",
+      "\t<template #type></template>",
+      "",
+      "\t<template #variants></template>",
+      "</TheComponentShowcaseGroupProp>"
+    ],
+    "description": ""
+  },
+  "css transition": {
+    "prefix": "trans",
+    "body": [
+      "transition-property: $1;",
+      "transition-duration: $2;",
+      "transition-timing-function: $3;",
+    ],
+    "description": ""
+  },
+  "define type-based emits": {
+    "prefix": "defineEmits",
+    "body": [
+      "const emit = defineEmits<{",
+      "  (e: \"$1\", $2): void;",
+      "}>();"
+    ]
+  }
+}

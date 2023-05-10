@@ -1,0 +1,12 @@
+@mixin line-clamp($number-of-lines, $line-height: null) {
+  display: -webkit-box;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $number-of-lines;
+  -webkit-box-orient: vertical;
+
+  @if $line-height {
+    max-height: calc(#{$number-of-lines} * #{$line-height});
+  }
+}

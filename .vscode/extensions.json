@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "aaron-bond.better-comments",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint",
+    "stylelint.vscode-stylelint",
+    "gruntfuggly.todo-tree",
+    "mrmlnc.vscode-scss"
+  ]
+}

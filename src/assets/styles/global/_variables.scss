@@ -1,0 +1,12 @@
+/* stylelint-disable selector-pseudo-class-disallowed-list */
+@use "@style/mixins" as mixins;
+
+:root {
+  --global-main-container-padding: 17px;
+  --global-main-container-width: 1172px;
+  --v-rhythm-1: 8px;
+
+  @for $i from 2 to 10 {
+    --v-rhythm-#{$i}: calc(var(--v-rhythm-1) * #{$i});
+  }
+}

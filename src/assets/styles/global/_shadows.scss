@@ -1,0 +1,18 @@
+/* stylelint-disable selector-pseudo-class-disallowed-list */
+:root {
+  // black
+  --global-shadow-black-1: 0px 4px 4px -2px rgb(24 39 75 / 0.08);
+  --global-shadow-black-2: 0px 8px 8px -4px rgb(24 39 75 / 0.08);
+  --global-shadow-black-3: 0px 8px 16px rgb(24 39 75 / 0.08);
+  --global-shadow-black-4: 0px 8px 24px rgb(24 39 75 / 0.08);
+  --global-shadow-black-5: 0px 10px 32px rgb(24 39 75 / 0.1);
+  --global-shadow-black-6: 0px 12px 42px rgb(24 39 75 / 0.12);
+  --global-shadow-black-7: 0px 14px 64px rgb(24 39 75 / 0.12);
+  --global-shadow-black-8: 0px 18px 88px rgb(24 39 75 / 0.14);
+
+  // blue
+  --global-shadow-blue: 0px 4px 4px -2px rgb(33 128 216 / 0.08);
+
+  // red
+  --global-shadow-red: 0px 4px 4px -2px rgb(224 26 49 / 0.06);
+}

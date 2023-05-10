@@ -1,0 +1,16 @@
+/* stylelint-disable selector-pseudo-class-disallowed-list */
+:root {
+  // cyan
+  --global-gradient-cyan: linear-gradient(65.11deg, #A4C772 -2.29%, #00ACBE 100%);
+
+  // light green
+  --global-gradient-light-green: linear-gradient(47.14deg, #E3EED5 0%, #CFFAFF 100%);
+
+  // blue
+  --global-gradient-blue-1: linear-gradient(47.14deg, #CFE9F8 0%, #C4E3FF 100%);
+  --global-gradient-blue-2: linear-gradient(65.11deg, #A5BDE0 -1.76%, #2180D8 100%);
+
+  // white
+  --global-gradient-white-transp-30: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgb(255 255 255 / 0.12) 0%, rgb(255 255 255 / 0.06) 100%);
+  --global-gradient-white-transp-60: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgb(255 255 255 / 0.24) 0%, rgb(255 255 255 / 0.12) 100%);
+}

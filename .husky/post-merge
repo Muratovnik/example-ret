@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ -f ./package.json ] && git diff --quiet HEAD@{1}..HEAD -- package.json || exit 0
+npm i

@@ -1,0 +1,18 @@
+stages:
+  - deploy_dev
+
+variables:
+  GIT_STRATEGY: none
+
+deploy_dev:
+  stage: deploy_dev
+  script:
+    - cd /home/bitrix/ext_www/lk.vdk.hopper-it.ru/front 
+    - git reset --hard
+    - git pull origin develop
+    - npm i
+    - npm run build
+  rules: 
+    - if: '$CI_COMMIT_REF_NAME =~ /develop/'
+  tags:
+    - vdk-lk-front
