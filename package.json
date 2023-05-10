@@ -2,6 +2,7 @@
   "name": "vue-project",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://Muratovnik.github.io/example-ret/",
   "scripts": {
     "dev": "node check-node-version && vite",
     "build": "node check-node-version && run-p type-check build-only",
@@ -9,7 +10,9 @@
     "build-only": "node check-node-version && vite build",
     "type-check": "node check-node-version && vue-tsc --noEmit",
     "lint": "node check-node-version && eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@vuelidate/core": "^2.0.2",
@@ -38,6 +41,7 @@
     "eslint": "^8.40.0",
     "eslint-plugin-vue": "^9.11.0",
     "eslint-plugin-vue-scoped-css": "^2.4.0",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "lazysizes": "^5.3.2",
     "maska": "^2.1.9",
