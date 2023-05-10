@@ -6,14 +6,6 @@ import checker from "vite-plugin-checker";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  server: {
-    proxy: {
-      "/mobileapp/api": {
-        target: "https://lk.vdk.hopper-it.ru",
-        changeOrigin: true,
-      },
-    },
-  },
   build: {
     outDir: "./dist",
   },
