@@ -1,7 +1,20 @@
 <template>
   <div class="app">
     <TheHeader />
-    <RouterView />
+    <VContainer>
+      <div class="app__info">
+        <div
+          v-for="(item, i) in showedSiteInformation"
+          :key="i"
+          class="app__info-row"
+        >
+          <span class="app__info-item">{{ item.text }}</span>
+          <span class="app__info-item app__info-item--highliht">{{
+            item.value
+          }}</span>
+        </div>
+      </div>
+    </VContainer>
     <VSelect
       v-model="currentSite"
       :items="possibleSites"
@@ -16,7 +29,6 @@ import { useCurrentSiteStore } from "@stores/currentSite";
 import type { Sites } from "@types";
 
 import TheHeader from "@components/TheHeader";
-import { RouterView } from "vue-router";
 import { VSelect } from "vuetify/components";
 
 const possibleSites = ref<Sites[]>(["asko", "bosh", "falmec", "elica"]);
@@ -30,6 +42,32 @@ const accentColor = computed<string>(
 
 watch(currentSite, (val) => {
   currentSiteStore.setSite(val);
+});
+
+import VContainer from "@components/VContainer";
+
+const showedSiteInformation = computed(() => {
+  const showedSiteInfoContainer = {
+    name: {
+      text: "Выбран сайт:",
+      value: "",
+    },
+    accentColor: {
+      text: "Акцентный цвет (hsl):",
+      value: "",
+    },
+  };
+
+  Object.keys(currentSiteStore.siteInfo).map((infoBlockKey) => {
+    showedSiteInfoContainer[
+      infoBlockKey as keyof typeof showedSiteInfoContainer
+    ].value =
+      currentSiteStore.siteInfo[
+        infoBlockKey as keyof typeof currentSiteStore.siteInfo
+      ];
+  });
+
+  return showedSiteInfoContainer;
 });
 </script>
 
@@ -59,6 +97,20 @@ watch(currentSite, (val) => {
   --global-color-sc: hsl(var(--global-color-sc-hsl));
   --global-color-sc-03: hsla(var(--global-color-sc-hsl) / 0.3);
   --global-color-sc-07: hsla(var(--global-color-sc-hsl) / 0.7);
+
+  flex-direction: column;
+  gap: 8px;
+
+  &__info-row {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__info-item {
+    &--highliht {
+      color: var(--global-color-accent);
+    }
+  }
 }
 </style>
 
