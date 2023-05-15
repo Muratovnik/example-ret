@@ -40,7 +40,7 @@ const props = defineProps<Props>();
 const iconPath = computed<string>(
   () =>
     props.path ||
-    `/images/icons/sprites/${props.groupName}.svg#${props.iconName}`,
+    `./images/icons/sprites/${props.groupName}.svg#${props.iconName}`,
 );
 </script>
 

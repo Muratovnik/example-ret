@@ -18,7 +18,7 @@ interface Props {
 const props = defineProps<Props>();
 
 const logoPath = computed<string>(
-  () => `/images/icons/sprites/logos.svg#${props.logoName}`,
+  () => `./images/icons/sprites/logos.svg#${props.logoName}`,
 );
 </script>
 
